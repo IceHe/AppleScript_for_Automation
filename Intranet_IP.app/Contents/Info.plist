@@ -44,9 +44,9 @@
 		<key>positionOfDivider</key>
 		<real>421</real>
 		<key>savedFrame</key>
-		<string>578 958 700 672 -318 800 1920 1057 </string>
+		<string>426 59 700 672 0 0 1280 777 </string>
 		<key>selectedTab</key>
-		<string>description</string>
+		<string>result</string>
 	</dict>
 </dict>
 </plist>
