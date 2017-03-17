@@ -1,4 +1,16 @@
 .DS_Store
 .idea/
+
 Evernote/
 Evernote/*
+Private/*
+
+*.app/Icon*
+*.app/Contents/Info.plist
+*.app/Contents/PkgInfo
+*.app/Contents/MacOS/*
+*.app/Contents/Resources/applet.icns
+*.app/Contents/Resources/applet.rsrc
+*.app/Contents/Resources/description.rtfd
+*.app/Contents/Resources/Scripts/main.scpt
+!*.app/Contents/Resources/Scripts/main.rtf
