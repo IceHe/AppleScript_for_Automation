@@ -12,5 +12,13 @@ Private/*
 *.app/Contents/Resources/applet.icns
 *.app/Contents/Resources/applet.rsrc
 *.app/Contents/Resources/description.rtfd
-*.app/Contents/Resources/Scripts/main.scpt
-!*.app/Contents/Resources/Scripts/main.rtf
+!*.app/Contents/Resources/Scripts/main.scpt
+
+_unused/*.app/Icon*
+_unused/*.app/Contents/Info.plist
+_unused/*.app/Contents/PkgInfo
+_unused/*.app/Contents/MacOS/*
+_unused/*.app/Contents/Resources/applet.icns
+_unused/*.app/Contents/Resources/applet.rsrc
+_unused/*.app/Contents/Resources/description.rtfd
+!_unused/*.app/Contents/Resources/Scripts/main.scpt
