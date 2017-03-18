@@ -15,13 +15,13 @@ on run argv
 	end if
 	
 	
-	set next_day_mm to run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/month2mm.scpt") with parameters {next_day}
+	set next_day_mm to run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/month2mm.applescript") with parameters {next_day}
 	set next_day_yyyy to year of next_day
 	set next_day_yy to (next_day_yyyy mod 100)
 	
 	
 	set target_date_yyyy to year of target_date
-	set target_date_mm to run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/month2mm.scpt") with parameters {target_date}
+	set target_date_mm to run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/month2mm.applescript") with parameters {target_date}
 	
 	
 	

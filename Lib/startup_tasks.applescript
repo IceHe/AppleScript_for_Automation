@@ -23,8 +23,8 @@ on run argv
 	#set apps to apps & {{name:"Google Chrome", ac_power:true, online:true}} # Slow
 	#set apps to apps & {{name:"Evernote", ac_power:true, online:true}}
 	
-	set is_ac_power to run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_ac_power.scpt")
-	set is_online to run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_network_available.scpt")
+	set is_ac_power to run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_ac_power.applescript")
+	set is_online to run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_network_available.applescript")
 	
 	repeat with each_app in apps
 		log each_app # tmp
@@ -48,11 +48,11 @@ on run argv
 		end try
 		
 		if is_startup then
-			if is_allowed and not (run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_app_running.scpt") with parameters {name of each_app}) then
+			if is_allowed and not (run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_app_running.applescript") with parameters {name of each_app}) then
 				tell application (name of each_app) to launch
 			end if
 		else
-			if not is_allowed and (run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_app_running.scpt") with parameters {name of each_app}) then
+			if not is_allowed and (run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_app_running.applescript") with parameters {name of each_app}) then
 				tell application (name of each_app) to quit
 			end if
 		end if
@@ -62,7 +62,7 @@ on run argv
 	if is_startup then
 		set target_app to "iStat Menus"
 		
-		if (run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_app_running.scpt") with parameters target_app) and (run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_app_on_dock.scpt") with parameters target_app) then
+		if (run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_app_running.applescript") with parameters target_app) and (run script (POSIX file "/Users/IceHe/Documents/AppleScript/Lib/is_app_on_dock.applescript") with parameters target_app) then
 			tell application target_app to quit
 		end if
 	end if
