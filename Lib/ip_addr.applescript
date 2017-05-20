@@ -20,7 +20,7 @@ on run argv
 		do shell script "echo '" & cur_ip & "' | tr -d \"\\n\" | pbcopy"
 		
 		if is_show_ip then
-			display alert "IP: " & cur_ip
+			display alert "IP: " & cur_ip giving up after 3
 		end if
 	end if
 	
