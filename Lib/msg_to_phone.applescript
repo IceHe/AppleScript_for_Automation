@@ -15,4 +15,6 @@ on run argv
 		quit
 	end tell
 	
+	display alert "Sent: {{" & msg & "}}" giving up after 3
+
 end run
