@@ -29,7 +29,7 @@ on run argv
 	
 	if date = (class of _month) then
 		
-		set _month to (item 1 of split_str((short date string of _month), "/")) as integer
+		set _month to (item 2 of split_str((short date string of _month), "/")) as integer
 		
 	else if string = (class of _month) then
 		
