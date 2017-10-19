@@ -15,7 +15,7 @@ on run argv
 	if cur_ip = "" then
 		set cur_ip to do shell script "/sbin/ifconfig en9|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d 'addr:'"
 	end if
-
+	
 	if cur_ip = "" then
 		# Wireless
 		set cur_ip to do shell script "/sbin/ifconfig en0|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d 'addr:'"
