@@ -1,9 +1,13 @@
 on run argv
 	
+	set copy_to_clipboard to false
 	set is_show_ip to false
 	
 	if script ­ class of argv then
 		if true = (item 1 of argv) then
+			set copy_to_clipboard to true
+		end if
+		if true = (item 2 of argv) then
 			set is_show_ip to true
 		end if
 	end if
@@ -22,11 +26,15 @@ on run argv
 	end if
 	
 	if cur_ip ­ "" then
-		do shell script "echo '" & cur_ip & "' | tr -d \"\\n\" | pbcopy"
+		if copy_to_clipboard then
+			do shell script "echo '" & cur_ip & "' | tr -d \"\\n\" | pbcopy"
+		end if
 		
 		if is_show_ip then
 			display alert "IP: " & cur_ip giving up after 15
 		end if
 	end if
 	
+	return cur_ip
+
 end run
