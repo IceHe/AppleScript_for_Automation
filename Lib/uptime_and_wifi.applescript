@@ -9,14 +9,9 @@ on run argv
 	if (uptime as integer) > 9 then
 		return uptime
 	end if
-
+	
 	set wifi_name to do shell script "networksetup -getairportnetwork en0 | awk -F ': ' '{print $2}'"
 	
 	if wifi_name = "Sina Plaza Mobile" then return do shell script "networksetup -setairportnetwork en0 'Sina Plaza Office' urtheone"
-	
-	delay 10
-
-	tell application "Keyboard Maestro" to quit
-	tell application "Karabiner-Elements" to quit
 	
 end run

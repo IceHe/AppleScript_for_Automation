@@ -9,4 +9,3 @@
 *.app/Contents/Resources/applet.rsrc
 *.app/Contents/Resources/description.rtfd
 !*.app/Contents/Resources/Scripts/main.scpt
-
