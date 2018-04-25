@@ -1,5 +1,6 @@
 .DS_Store
 .idea/
+Private/
 
 *.app/Icon*
 *.app/Contents/Info.plist
