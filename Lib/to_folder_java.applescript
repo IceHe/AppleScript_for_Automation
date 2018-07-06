@@ -2,16 +2,16 @@ tell application "Finder"
 
 	#activate
 
-	#set targetFolder to (POSIX file "/Users/IceHe/Documents/Java") as alias
-	set targetFolder to (POSIX file "/Users/IceHe/Documents/Java")
+	#set target_folder to (POSIX file "/path/to/somewhere") as alias
+	set target_folder to (POSIX file "/Users/IceHe/Documents/Java")
 
-	#open targetFolder
-	#reveal targetFolder
+	#open target_folder
+	#reveal target_folder
 
 	if front Finder window exists then
-		set target of front Finder window to targetFolder
+		set target of front Finder window to target_folder
 	else
-		open targetFolder
+		open target_folder
 	end if
 
 end tell
